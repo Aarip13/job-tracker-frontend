@@ -1,8 +1,8 @@
 import { useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import API from "../api/axios";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
@@ -69,6 +69,9 @@ function Login() {
         </button>
 
       </form>
+      <p style={{ textAlign: "center", marginTop: "20px" }}>
+       Don't have an account? <Link to="/register">Register</Link>
+      </p>
     </div>
   );
 }

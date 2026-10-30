@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import API from "../api/axios";
+import { Link } from "react-router-dom";
 
 function Register() {
    const navigate = useNavigate();
@@ -82,6 +83,9 @@ function Register() {
           Register
         </button>
       </form>
+      <p style={{ textAlign: "center", marginTop: "20px" }}>
+      Already have an account? <Link to="/login">Login</Link>
+      </p>
     </div>
   );
 }
